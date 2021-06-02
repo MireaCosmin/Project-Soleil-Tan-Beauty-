@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+
+    <link rel="stylesheet" href="/style.css">
+    <!--am pus '/' inaintea lui style.css pentru a se uita la fisierul "style.css" din folderul "public"-->
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="checkbox" id="check">
+    <!--Header area start-->
+    <header>
+        <label for="check">
+            <i class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
+        <div class="left_area">
+            <label class="logo1">Soleil</label>
+            <br>
+            <label class="logo2">Tan & Beauty</label>
+        </div>
+
+        <div class="right_area">
+            <a href="/home-page" class="logout_btn">Log out</a>
+        </div>
+    </header>
+
+    <!--Sidebar area start-->
+    <div class="sidebar">
+        <p>Admin</p>
+        <a href="#"><i class="fas fa-concierge-bell"></i><span>Servicii</span></a>
+        <a href="#"><i class="far fa-clock"></i><span>Program</span></a>
+        <a href="/vizualizeazaAngajati"><i class="fas fa-users"></i><span>Angajati</span></a>
+        <a href="#"><i class="far fa-comment-dots"></i><span>Evaluari</span></a>
+    </div>
+
+
+    <!--Adauga form-->
+    <section>
+        <form class="box_adauga" action="/adaugaServiciu" method="POST">
+            <h1>Adauga serviciu</h1>
+            <input type="text" placeholder="Nume" id="name" name="nume" required>
+            <input type="time" placeholder="Durata" id="time" name="durata">
+            <input type="text" placeholder="Pret" id="price" name="pret">
+            <input type="text" placeholder="Categorie" id="categorie" name="categorie">
+            <button type="submit" class="btn1">Adauga</button>
+        </form>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/style.css">
+   
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <h4>Service Add Page</h4>
+      
+
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        <div class="dropdown">
+            <button class="dropbtn">Adauga</i></button>
+            <div class="dropdown-content">
+                <a href="/adaugaAngajat">Adauga angajat</a>
+                <a href="/adaugaServiciu">Adauga serviciu</a>
+                <a href="/adaugaCategorie">Adauga categorie</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Vizualizeaza</button>
+            <div class="dropdown-content">
+                <a href="/vizualizeazaCategorii">Categorii</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                Service Form
+            </div>
+            <div class="card-body">
+                <form action="/adaugaServiciu" method="POST">
+
+
+                    <div class="form-group">
+                        <label for="name">Denumire</label>
+                        <input type="text" class="form-control" id="name" name="nume">
+                    </div>
+
+
+                 
+
+                    <div class="form-group">
+                        <label for="department">Durata</label>
+                      
+                        <input type="time" id="time" name="durata" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Pret (in RON)</label>
+                        <input type="text" class="form-control" id="price" name="pret">
+                    </div>
+
+
+                 
+
+                    <div class="form-group">
+                        <label for="category">Categorie</label>
+
+                        <select class="form-control" id="categorie" name="categorie">
+                                    <% for(var i=0; i < categorii.length; i++) {%>
+                                    <option> <%= categorii[i].nume %> </option>
+                                    <% } %>
+                        </select>
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Adauga serviciu</button>
+
+
+                </form>
+            </div>
+        </div>
+
+
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script>
+    var input = $('#time').pickatime({
+        autoclose: true,
+        'default': 'now',
+        min: "00:00AM",
+        max: "02:00AM"
+    });
+
+
+    $('#check-minutes').click(function(e) {
+        e.stopPropagation();
+        input.pickatime('show').pickatime('toggleView', 'minutes');
+    });
+</script>
+
+
+</body>
+
+</html>-->

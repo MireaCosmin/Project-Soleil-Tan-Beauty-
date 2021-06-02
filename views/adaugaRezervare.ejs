@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="jquery.datetimepicker.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css">
+    <!--am pus '/' inaintea lui style.css pentru a se uita la fisierul "style.css" din folderul "public"-->
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <h4>Employee Add Page</h4>
+        <!--
+       <ul>
+           <li><a href="/">Home</a></li>
+           <li><a href="/login">Login</a></li>
+           <li><a href="/register">Register</a></li>
+       </ul>
+       -->
+
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        <div class="dropdown">
+            <button class="dropbtn">Adauga</button>
+            <div class="dropdown-content">
+                <a href="/adaugaAngajat">Adauga angajat</a>
+                <a href="/adaugaServiciu">Adauga serviciu</a>
+                <a href="/adaugaCategorie">Adauga categorie</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Vizualizeaza</button>
+            <div class="dropdown-content">
+                <a href="/vizualizeazaCategorii">Categorii</a>
+                <a href="/vizualizeazaAngajati">Angajati</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                Rezervare
+            </div>
+            <div class="card-body">
+                <form action="/adaugaRezervare" method="POST">
+
+                    <div class="form-group">
+                        <label for="category">Serviciu</label>
+                        <select class="form-control" id="serviciu" name="serviciu">
+                                    <% servicii.forEach(function(serviciu){ %>
+                                    <option> <%= serviciu.nume %> </option>
+                                    <% }); %>
+                        </select>
+                    </div>
+
+
+                    <!--<div class="form-group">
+                        <label for="name">Serviciu</label>
+                        <input type="text" class="form-control" id="serviciu" name="serviciu" required>
+                    </div>-->
+
+                    <!--<div class="form-group">
+                        <label for="data">Data</label>
+                        <input type="text" class="form-control" id="data" name="data" required>
+                    </div>-->
+
+                    <div class="md-form md-outline input-with-post-icon datepicker">
+                        <label for="example">Data</label>
+                        <input placeholder="Select date" type="date" id="data" name="data" class="form-control">
+                    </div>
+
+
+                    <!--<div class="form-group">
+                        <label for="category">Angajat</label>
+                        <select class="form-control" id="angajat" name="angajat">
+                                   
+                        </select>
+                    </div>-->
+
+                    <div class="form-group">
+                        <label for="department">Ora</label>
+                        <!--<input type="text" class="form-control" id="ora_inceput" name="ora_inceput" required>-->
+                        <input type="time" id="ora_inceput" name="ora_inceput" class="form-control">
+                    </div>
+
+                    <!--<div class="md-form mx-5 my-5">
+                        <input type="time" id="inputMDEx1" class="form-control">
+                        <label for="inputMDEx1">Choose your time</label>
+                    </div>-->
+
+                    <!--
+                    <div class="form-group">
+                        <label for="department">Pret</label>
+                        <input type="text" class="form-control" id="pret" name="pret" required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="department">Ora_sfarsit</label>
+                        <input type="text" class="form-control" id="ora_sfarsit" name="ora_sfarsit" required>
+                    </div>
+-->
+
+                    <button type="submit" class="btn btn-primary">Rezerva</button>
+
+                </form>
+            </div>
+        </div>
+
+
+        <!--<h4 class="alert alert-danger mt-4"></h4>-->
+
+    </div>
+
+
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com//jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="jquery.datetimepicker.full.min.js"></script>
+
+    <script>
+        $('#data').datetimepicker({
+            timepicker: false,
+            datepicker: true,
+            format: 'Y-m-d',
+            value: '2021-05-19',
+            weeks: true
+
+        })
+    </script>
+
+</body>
+
+</html>

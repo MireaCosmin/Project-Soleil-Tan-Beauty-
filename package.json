@@ -1,0 +1,31 @@
+{
+    "name": "proiect_salon",
+    "version": "1.0.0",
+    "description": "licenta",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js"
+    },
+    "author": "Mirea Cosmin",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "body-parser": "^1.19.0",
+        "bootstrap": "^5.0.1",
+        "bootstrap-icons": "^1.5.0",
+        "cookie-parser": "^1.4.5",
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "express-fileupload": "^1.2.1",
+        "i": "^0.3.6",
+        "jsonwebtoken": "^8.5.1",
+        "multer": "^1.4.2",
+        "mysql": "^2.18.1",
+        "npm": "^7.15.0"
+    },
+    "devDependencies": {
+        "dotenv": "^8.2.0",
+        "nodemon": "^2.0.7"
+    }
+}

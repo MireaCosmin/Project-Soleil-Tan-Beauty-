@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+
+    <link rel="stylesheet" href="/style.css">
+    <!--am pus '/' inaintea lui style.css pentru a se uita la fisierul "style.css" din folderul "public"-->
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="checkbox" id="check">
+    <!--Header area start-->
+    <header>
+        <label for="check">
+            <i class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
+        <div class="left_area">
+            <label class="logo1">Soleil</label>
+            <br>
+            <label class="logo2">Tan & Beauty</label>
+        </div>
+
+        <div class="right_area">
+            <a href="/home-page" class="logout_btn">Log out</a>
+        </div>
+    </header>
+
+    <!--Sidebar area start-->
+    <div class="sidebar">
+        <p>Admin</p>
+        <a href="#"><i class="fas fa-concierge-bell"></i><span>Servicii</span></a>
+        <a href="#"><i class="far fa-clock"></i><span>Program</span></a>
+        <a href="/vizualizeazaAngajati"><i class="fas fa-users"></i><span>Angajati</span></a>
+        <a href="#"><i class="far fa-comment-dots"></i><span>Evaluari</span></a>
+    </div>
+
+
+    <!--Adauga form-->
+    <section>
+        <form class="box_adauga" action="/adaugaAngajat" method="POST">
+            <h1>Adauga angajat</h1>
+            <input type="text" placeholder="Nume" id="name_angajat" name="name_angajat" required>
+            <input type="text" placeholder="Adresa de E-mail" id="email_angajat" name="email_angajat">
+            <input type="password" placeholder="Parola" id="password_angajat" name="password_angajat">
+            <input type="password" placeholder="Confirma Parola" id="passwordConfirm_angajat" name="passwordConfirm_angajat">
+            <input type="text" placeholder="Numar de telefon" id="phone_angajat" name="phone_angajat">
+            <input type="text" placeholder="Departament" id="department" name="department">
+            <button type="submit" class="btn1">Adauga</button>
+        </form>
+    </section>
+
+    <!--
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                Register Form For Employees
+            </div>
+            <div class="card-body">
+                <form action="/adaugaAngajat" method="POST">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name_angajat" name="name_angajat" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email_angajat" name="email_angajat" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password_angajat" name="password_angajat" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passwordConfirm">Confirm Password</label>
+                        <input type="password" class="form-control" id="passwordConfirm_angajat" name="passwordConfirm_angajat" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone number</label>
+                        <input type="phone" class="form-control" id="phone_angajat" name="phone_angajat" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <input type="text" class="form-control" id="department" name="department" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Register Employee</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+-->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+</body>
+
+</html>

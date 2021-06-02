@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+
+    <link rel="stylesheet" href="/style.css">
+    <!--am pus '/' inaintea lui style.css pentru a se uita la fisierul "style.css" din folderul "public"-->
+    <title>Document</title>
+
+    <!--pentru icons si fontul logo-ului-->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        /* .fakeimg {
+            width: 100%;
+            height: 100%;
+            background: #aaa;
+        }
+        
+        .row {
+            background: white;
+            border-radius: 30px;
+            box-shadow: 12px 12px 22px grey;
+        }
+        
+        .btn1 {
+            border: none;
+            outline: none;
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .btn1:hover {
+            background: white;
+            border: 1px solid;
+            color: black;
+        }*/
+    </style>
+</head>
+
+<body>
+
+    <!--Header-->
+    <nav>
+        <label class="phone">
+        <ul>
+            <li><i class="fas fa-phone-volume"></i>
+        <a href="tel:0753061621">0753061621</a></li>
+        <li> <a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+        
+    </label>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+        <label class="logo1">Soleil</label>
+        <br>
+        <label class="logo2">Tan & Beauty</label>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+        </ul>
+    </nav>
+
+    <!--Register form-->
+    <section>
+        <form class="box_register" action="register" method="POST">
+            <h1>Register</h1>
+            <input type="text" placeholder="Nume" id="name" name="name">
+            <input type="text" placeholder="Adresa de E-mail" id="email" name="email">
+            <input type="password" placeholder="Parola" id="password" name="password">
+            <input type="password" placeholder="Confirma Parola" id="passwordConfirm" name="passwordConfirm">
+            <input type="text" placeholder="Numar de telefon" class="form-control my-3 p-4" id="phone" name="phone">
+            <button type="submit" class="btn1">Register</button>
+            <a href="/login">Ai deja cont? Acceseaza-l aici!</a>
+        </form>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer-left">
+            <!--<img src="imagini/logo.jpeg" alt="logo">-->
+            <p>Descriere</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <ul class="footer-right">
+            <li>
+                <h2>Scurtaturi</h2>
+
+                <ul class="box">
+                    <li><a href="#">Preturi</a></li>
+                    <li><a href="#">Produse</a></li>
+                    <li><a href="#">Servicii</a></li>
+                </ul>
+            </li>
+
+            <li class="features">
+                <h2>Contact</h2>
+
+                <ul class="box">
+                    <li><a href="#">Telefon</a></li>
+                    <li><a href="#">Strada</a></li>
+                    <li><a href="#">Email</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <h2>Program</h2>
+
+                <ul class="box">
+                    <li><a href="#">Luni-Vineri</a></li>
+                    <li><a href="#">Sambata</a></li>
+                    <li><a href="#">Duminica</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="footer-bottom">
+            <p>All Right reserved by &copy;Soleil Tan & Beauty 2021</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+</body>
+
+</html>
